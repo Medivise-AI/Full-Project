@@ -1,0 +1,27 @@
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 40px;
+  min-height: 100vh;
+  background: #f7f8fa;
+}
+
+.dashboard h2 {
+  color: #00D4FF;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.patients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.patient-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e4e4e4;
+}

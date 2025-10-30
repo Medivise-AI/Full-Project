@@ -1,0 +1,105 @@
+.patient-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f4ff, #e6e9ff);
+  padding: 50px 20px;
+}
+
+.patient-card {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  width: 600px;
+}
+
+.patient-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #4c6fff;
+  margin-bottom: 20px;
+}
+
+.divider {
+  border: none;
+  border-top: 2px solid #eee;
+  margin: 20px 0;
+}
+
+.test-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 20px;
+}
+
+.test-list li {
+  background: #f7f9ff;
+  border: 1px solid #d7dcff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.upload-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.upload-btn {
+  background-color: #4c6fff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.upload-btn:hover {
+  background-color: #3757d1;
+}
+
+.notes {
+  background: #f9faff;
+  border-left: 4px solid #4c6fff;
+  padding: 15px;
+  border-radius: 8px;
+  color: #444;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.edit-btn {
+  background-color: #ffcc00;
+  color: #333;
+}
+
+.edit-btn:hover {
+  background-color: #e6b800;
+}
+
+.delete-btn {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d9363e;
+}
