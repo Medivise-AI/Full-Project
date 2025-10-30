@@ -108,8 +108,8 @@
     "concurrently": "^9.2.1"
   },
   "scripts": {
-    "start-server": "cd backend && nodemon server.js",
-    "start-client": "cd frontend && npm start",
+    "start-server": "cd server && nodemon server.js",
+    "start-client": "cd client && npm start",
     "dev": "concurrently \"npm run start-server\" \"npm run start-client\""
   },
   "keywords": [],
