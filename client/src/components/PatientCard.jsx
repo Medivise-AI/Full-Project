@@ -17,8 +17,14 @@ function PatientCard({ patient }) {
         <strong>Sex:</strong> {patient.gender}
       </p>
       <p className="text-gray-700 dark:text-gray-300">
-        <strong>Condition:</strong> {patient.medical_history}
+        <strong>Condition:</strong>
       </p>
+      <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
+        {patient.medical_history
+          .split("\n")
+          .map((item, index) => item.trim() && <li key={index}>{item}</li>)}
+      </ul>
+
       <button
         onClick={handleViewProfile}
         className="mt-3 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"

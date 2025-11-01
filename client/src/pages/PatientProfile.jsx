@@ -172,22 +172,19 @@ const handleUpload = async () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-28 pb-16 px-6 transition-colors duration-500">
-
       {errorMessage && (
-      <div className="fixed top-5 right-5 bg-red-500 text-white px-4 py-2 rounded shadow-lg z-50 animate-slide-in flex items-center justify-between gap-2">
-        <span>{errorMessage}</span>
-        <button
-          onClick={() => setErrorMessage("")}
-          className="font-bold text-lg"
-        >
-          ×
-        </button>
-      </div>
-    )}
+        <div className="fixed top-5 right-5 bg-red-500 text-white px-4 py-2 rounded shadow-lg z-50 animate-slide-in flex items-center justify-between gap-2">
+          <span>{errorMessage}</span>
+          <button
+            onClick={() => setErrorMessage("")}
+            className="font-bold text-lg"
+          >
+            ×
+          </button>
+        </div>
+      )}
 
       <div className="max-w-6xl mx-auto bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm shadow-2xl rounded-3xl border border-blue-100 dark:border-gray-700 p-10 transition-all duration-500">
-        
-
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-center mb-10 border-b border-gray-200 dark:border-gray-700 pb-5">
           <h2 className="text-3xl font-bold text-blue-700 dark:text-blue-300 mb-4 sm:mb-0 flex items-center gap-2">
@@ -232,7 +229,17 @@ const handleUpload = async () => {
             <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-2">
               Medical History
             </h3>
-            <p>{patient?.medical_history || "No history available"}</p>
+            {patient?.medical_history ? (
+              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
+                {patient.medical_history
+                  .split("\n")
+                  .map(
+                    (item, index) => item.trim() && <li key={index}>{item}</li>
+                  )}
+              </ul>
+            ) : (
+              <p>No history available</p>
+            )}
           </div>
         </div>
 
@@ -255,7 +262,6 @@ const handleUpload = async () => {
                       key={i}
                       className="border-b border-gray-200 dark:border-gray-700 hover:bg-blue-50 dark:hover:bg-gray-700 transition"
                     >
-
                       <td className="p-3 text-gray-900 dark:text-gray-100 align-top">
                         <div className="flex flex-col gap-3 max-w-full">
                           <ReactMarkdown
