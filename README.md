@@ -48,22 +48,42 @@ git clone https://github.com/Medivise-AI/Full-Project.git
 cd Full-Project
 ```
 
+### Install Docker
+
+1. Download Docker Desktop: [https://www.docker.com/get-started](https://www.docker.com/get-started)
+2. Install and **open Docker Desktop**. Make sure the Docker icon is running in your system tray.
+
+> Docker is required to run the PostgreSQL database easily.
+
+
+### Start PostgreSQL using Docker
+
+```bash
+docker compose up -d
+```
+
+> This will start PostgreSQL at `localhost:5432` 
+
+
+
 ### 2️⃣ Install dependencies
 
 ```bash
 npm install
-cd client && npm install
-cd server && npm install
+cd client
+npm install
+cd ..
+cd server
+npm install
+cd ..
+
 
 ```
 
 ### 3️⃣ Create a `.env` file inside the `server` folder
 
 ```
-PORT=5000
-DATABASE_URL=your_postgresql_connection_string
-JWT_SECRET=your_secret_key
-GEMINI_API_KEY=your_gemini_api_key
+from .env.example
 ```
 
 ### 4️⃣ Run the project

@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:16
+    container_name: medivise_db
+    environment:
+      POSTGRES_USER: fayez
+      POSTGRES_PASSWORD: 0000
+      POSTGRES_DB: medivise_ai_db
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  db_data:
