@@ -113,5 +113,5 @@ This will run both the **frontend** and **backend** concurrently.
 
 ## Team Members
 1. Fayez Abu Hajar - Backend Developer (Team leader)
-2. Mohammad Alzyoud - Frontend Developer
+2. Mohammad Alzyoud - Frontend Developer and API Integration
 3. Hasan Alqadri - Frontend Developer
